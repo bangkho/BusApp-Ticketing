@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+   <children>
+      <AnchorPane fx:id="transDash" layoutY="75.0" prefHeight="425.0" prefWidth="600.0" style="-fx-background-color: #fff;">
+         <children>
+            <Label fx:id="labelDash112" alignment="BASELINE_LEFT" layoutX="223.0" layoutY="10.0" text="History Transaksi" textFill="#00bbff">
+               <font>
+                  <Font name="Roboto Black" size="24.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="#00bbff" glyphName="LIST" layoutX="185.0" layoutY="33.0" size="24" />
+            <JFXButton layoutX="523.0" layoutY="386.0" onAction="#trans" text="Update" />
+            <JFXTreeTableView fx:id="treeTable" layoutX="25.0" layoutY="50.0" prefHeight="325.0" prefWidth="550.0" />
+            <JFXButton layoutX="26.0" layoutY="386.0" onAction="#report" text="Report" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="ticketDash" layoutY="76.0" prefHeight="425.0" prefWidth="600.0" style="-fx-background-color: #fff;">
+         <children>
+            <JFXTextField fx:id="nama_lengkap" focusColor="#00bbff" labelFloat="true" layoutX="15.0" layoutY="71.0" maxWidth="244.0" minWidth="244.0" prefHeight="35.0" prefWidth="244.0" promptText="Nama Lengkap">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="ktp" focusColor="#00bbff" labelFloat="true" layoutX="15.0" layoutY="131.0" maxWidth="244.0" minWidth="244.0" prefHeight="35.0" prefWidth="244.0" promptText="No. KTP">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="alamat" focusColor="#00bbff" labelFloat="true" layoutX="17.0" layoutY="189.0" maxWidth="244.0" minWidth="223.0" prefHeight="35.0" prefWidth="244.0" promptText="Alamat">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font>
+            </JFXTextField>
+            <Label fx:id="labelDash1" alignment="BASELINE_LEFT" layoutX="64.0" layoutY="14.0" text="Data Penumpang" textFill="#00bbff">
+               <font>
+                  <Font name="Roboto Black" size="24.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="#00bbff" glyphName="PENCIL" layoutX="30.0" layoutY="37.0" size="24" />
+            <JFXDatePicker fx:id="tgl_lhr" defaultColor="#00bbff" layoutX="17.0" layoutY="248.0" prefHeight="31.0" prefWidth="244.0" promptText="Tanggal Lahir " />
+            <JFXRadioButton fx:id="laki" layoutX="14.0" layoutY="322.0" text="Laki-Laki">
+               <toggleGroup>
+                  <ToggleGroup fx:id="jk" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="perem" layoutX="149.0" layoutY="323.0" text="Perempuan" toggleGroup="$jk">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font>
+            </JFXRadioButton>
+            <Label fx:id="labelDash11" alignment="BASELINE_LEFT" layoutX="340.0" layoutY="14.0" text="Tiket Bus" textFill="#00bbff">
+               <font>
+                  <Font name="Roboto Black" size="24.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="#00bbff" glyphName="PENCIL" layoutX="306.0" layoutY="37.0" size="24" />
+            <JFXComboBox fx:id="trayek" layoutX="306.0" layoutY="135.0" prefHeight="25.0" prefWidth="244.0" promptText="Trayek " />
+            <Label fx:id="account1" alignment="BASELINE_RIGHT" contentDisplay="RIGHT" layoutX="26.0" layoutY="293.0" text="Jenis Kelamin">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font>
+            </Label>
+            <JFXDatePicker fx:id="tgl_naik" defaultColor="#00bbff" layoutX="306.0" layoutY="244.0" prefHeight="31.0" prefWidth="244.0" promptText="Tanggal Berangkat" />
+            <Label fx:id="labelDash111" alignment="BASELINE_LEFT" layoutX="306.0" layoutY="191.0" prefHeight="29.0" prefWidth="60.0" text="Rp." textFill="#00bbff">
+               <font>
+                  <Font name="Roboto Black" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="pesan" alignment="BASELINE_LEFT" buttonType="RAISED" layoutX="312.0" layoutY="354.0" onAction="#pesan" prefHeight="49.0" prefWidth="244.0" style="-fx-background-color: #1976d2;" text="Pesan Tiket" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="26.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView fill="WHITE" glyphName="TICKET" layoutX="511.0" layoutY="390.0" size="30" />
+            <JFXComboBox fx:id="nama_bus" layoutX="304.0" layoutY="75.0" prefHeight="25.0" prefWidth="244.0" promptText="Nama Bus" />
+            <JFXComboBox fx:id="jam_naik" layoutX="306.0" layoutY="296.0" prefHeight="25.0" prefWidth="244.0" promptText="Jam Berangkat" />
+            <JFXComboBox fx:id="tarif" layoutX="356.0" layoutY="193.0" prefHeight="25.0" prefWidth="196.0" promptText="Tarif" />
+         </children></AnchorPane>
+      <AnchorPane prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: #1976d2;">
+         <children>
+            <Label fx:id="labelDash" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="21.0" text="Ticketing Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Black" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="account" alignment="BASELINE_RIGHT" contentDisplay="RIGHT" layoutX="491.0" layoutY="12.0" text="Admin" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="datetime" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="445.0" layoutY="45.0" text="Fri, 10-11-2017" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fx:id="close" fill="WHITE" glyphName="TIMES" layoutX="569.0" layoutY="32.0" onMousePressed="#close" size="24" />
+         </children>
+         <effect>
+            <DropShadow height="15.0" radius="5.75" width="10.0" />
+         </effect>
+      </AnchorPane>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="175.0" disable="true" overLayVisible="false" prefHeight="500.0" prefWidth="175.0" />
+      <JFXHamburger fx:id="menuToggle" layoutX="557.0" layoutY="90.0" />
+      <StackPane fx:id="stack" disable="true" prefHeight="500.0" prefWidth="600.0" />
+   </children>
+</AnchorPane>

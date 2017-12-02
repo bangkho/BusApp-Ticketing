@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="650.0" style="-fx-background-color: rgba(0,100,100,0);" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BusLoginController">
+   <children>
+      <AnchorPane layoutY="25.0" prefHeight="300.0" prefWidth="325.0" style="-fx-background-color: #fff;">
+         <children>
+            <JFXTextField fx:id="userLogin" alignment="CENTER" layoutX="61.0" layoutY="52.0" maxWidth="300.0" minWidth="150.0" prefHeight="45.0" prefWidth="250.0" promptText="Username">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passLogin" alignment="CENTER" layoutX="61.0" layoutY="123.0" maxWidth="300.0" minWidth="150.0" prefHeight="45.0" prefWidth="250.0" promptText="Password">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="login" alignment="TOP_LEFT" buttonType="RAISED" layoutX="66.0" layoutY="201.0" onAction="#login" prefHeight="24.0" prefWidth="200.0" style="-fx-background-color: #1976d2;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Black" size="25.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView glyphName="USER" layoutX="34.0" layoutY="86.0" size="30" />
+            <FontAwesomeIconView glyphName="KEY" layoutX="31.0" layoutY="157.0" size="30" />
+            <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_RIGHT" layoutX="225.0" layoutY="234.0" size="20" />
+            <StackPane fx:id="stack" disable="true" onMouseEntered="#hoverIn" onMouseExited="#hoverOut" prefHeight="300.0" prefWidth="329.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="326.0" prefHeight="350.0" prefWidth="325.0" style="-fx-background-color: #1976d2;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="38.0" layoutY="20.0" prefHeight="37.0" prefWidth="250.0" text="BUS APP TICKETING" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Black" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="loginText" alignment="CENTER" contentDisplay="CENTER" layoutX="133.0" layoutY="67.0" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="cp" alignment="CENTER" contentDisplay="CENTER" layoutX="89.0" layoutY="305.0" onMousePressed="#about" text="BangKho - 2017" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Black" size="20.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fx:id="close" fill="WHITE" glyphName="CLOSE" layoutX="299.0" layoutY="27.0" onMouseEntered="#hoverIn" onMouseExited="#hoverOut" onMousePressed="#close" size="20" />
+            <FontAwesomeIconView fill="WHITE" glyphName="BUS" layoutX="98.0" layoutY="256.0" size="150" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

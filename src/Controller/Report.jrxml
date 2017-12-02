@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Report" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6e0c8ddd-53b8-45a3-bc13-5e38be8ccd42">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT nama_penumpang,nama_bus,trayek,tarif,tgl,jam FROM `tiket` INNER JOIN `penumpang` ON tiket.no_ktp = penumpang.no_ktp]]>
+	</queryString>
+	<field name="nama_penumpang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_bus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="trayek" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tarif" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jam" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="0" width="338" height="79" uuid="ab1d7123-e7da-4c80-a648-8ee59abb30a7"/>
+				<textElement>
+					<font fontName="SansSerif" size="36"/>
+				</textElement>
+				<text><![CDATA[Report Data BusApp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="478" y="44" width="77" height="35" uuid="1ac69b41-cc95-4f3f-98c3-da82ae75e3b7"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Admin]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="455" y="0" width="100" height="20" uuid="e96dffaa-bdb4-4ace-9230-1ab6d07de89b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="10" width="141" height="25" uuid="e232305d-0ceb-40dd-99d1-2a1e4584b81c"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data Tiketing Bus :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="140" height="20" uuid="f62e8971-f2aa-48ca-a36e-ebcdf008b84c"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[Nama Penumpang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="0" width="89" height="20" uuid="e745ff03-da4e-4848-90c7-bb2ee8c1c621"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nama Bus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="0" width="92" height="20" uuid="5ce0defb-68c9-4132-95e0-4b88967b1a3b"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Trayek]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="0" width="76" height="20" uuid="2a3982ca-1c77-464d-8762-b2c031ffcf9a"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Tarif]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="0" width="95" height="20" uuid="d29ce43d-a796-4a92-9f3e-b24a506cb91a"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="492" y="0" width="60" height="20" uuid="02c4a589-3379-4f4b-a45c-36b5fdaae151"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Jam]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="21" width="552" height="1" uuid="0ebcfdc8-9380-4265-acfd-2bbae56f5b5a"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="140" height="20" uuid="55cab1cc-ae76-4425-9ca4-f423cef767d3"/>
+				<textFieldExpression><![CDATA[$F{nama_penumpang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="1" width="89" height="20" uuid="7c2a1f2a-0e02-484d-b7e8-9c13cd511394"/>
+				<textFieldExpression><![CDATA[$F{nama_bus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="0" width="92" height="20" uuid="5de028d6-f514-4209-9291-6bdc2df9559b"/>
+				<textFieldExpression><![CDATA[$F{trayek}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="321" y="0" width="76" height="20" uuid="2ece7e53-e177-4b48-b4e4-ea5cb73ac075"/>
+				<textFieldExpression><![CDATA[$F{tarif}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="0" width="95" height="20" uuid="312da847-82c3-420c-8c59-472c944421bc"/>
+				<textFieldExpression><![CDATA[$F{tgl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="492" y="0" width="60" height="20" uuid="41f24a58-0a8b-4f33-887a-a497868d83ca"/>
+				<textFieldExpression><![CDATA[$F{jam}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="424" y="34" width="80" height="20" uuid="96ed09ae-69e1-47fb-98d0-80dab698f1bf"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="504" y="34" width="40" height="20" uuid="3fb960ef-e8a0-4a9a-8b59-dc44ece19470"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
